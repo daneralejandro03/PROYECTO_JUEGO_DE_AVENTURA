@@ -31,25 +31,30 @@ def Principal():
     arma1 = Espada("1","Espada",100,100,"Espada",10,"Acero")
     arma2 = ArcoFlecha("2","Arco y Flecha",100,100,"Arco y Flecha",20,"Madera")
 
-    personaje1.addArma(arma1)
-    personaje1.addArma(arma2)
+    personaje3.addArma(arma1)
+    personaje3.addArma(arma2)
 
-    personaje1.setArma(personaje1.getArmas()[0])
+    personaje3.setArma(personaje3.getArmas()[0])
 
     print("\nLista de Armas del Personaje: Caballero")
     indice = 0
-    while indice < len(personaje1.getArmas()):
-        print(f"{indice}. {personaje1.getArmas()[indice].toStr()}")
+    while indice < len(personaje3.getArmas()):
+        print(f"{indice}. {personaje3.getArmas()[indice].toStr()}")
         indice += 1
 
     print("\nUsar Arma del Caballero:")
-    print(personaje1.getArma().usarArma())
+    print(personaje3.getArma().usarArma())
 
     print("\nVoy a usar el personaje Trol")
     print(personaje4.toStr())
 
     print("\nVoy a usar la magia del Trol")
     print(personaje4.usarMagia())
+
+    print("\nCambiar arma caballero")
+    personaje3.setArma(personaje3.getArmas()[1])
+
+    print(personaje3.getArma().usarArma())
 
 if __name__ == "__main__":
     Principal()
